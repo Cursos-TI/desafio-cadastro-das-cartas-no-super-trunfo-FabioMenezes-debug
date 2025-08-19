@@ -1,12 +1,6 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
-
-int main() {
+int main (){
     //dados da carta 1;
     char estado1 = 'A';
     char codigo1[10] = "A01";
@@ -14,7 +8,9 @@ int main() {
     int populacao1 = 12325000;
     int pontos1 = 50;
     float area1 = 1521.11;
-    float pib1 =699.28;
+    float pib1 =699280000000;
+    float densidade1 = populacao1 / area1;
+    float pibp1 = pib1 / populacao1;
 
     //dados da carta 2;
     char estado2 = 'B';
@@ -23,7 +19,9 @@ int main() {
     int populacao2 = 6748000;
     int pontos2 = 30;
     float area2 = 1200.25;
-    float pib2 =300.50;
+    float pib2 =300500000000;
+    float densidade2 = populacao2 / area2;  //Divida a população da cidade pela sua área
+    float pibp2 = pib2 / populacao2; //Divida o PIB da cidade pela sua população
     
 
 
@@ -35,8 +33,11 @@ int main() {
     printf("Nome da Cidade: %s\n",cidade1);
     printf("População: %d Habitantes\n",populacao1);
     printf("Área: %0.2f km²\n",area1);
-    printf("PIB: %0.2f bilhões de reais\n",pib1);
+    printf("PIB: %0.2f bilhões de reais\n",pib1/1000000000);
     printf("Número de Pontos Turísticos: %d\n",pontos1);
+    printf("Densidade Populacional: %0.2f hab/km²\n",densidade1);
+    printf("PIB per Capita: %0.2f reais\n",pibp1);
+
 
     //Imprimmir na tela dados da carta 2
     printf("Carta 2: \n");
@@ -45,8 +46,15 @@ int main() {
     printf("Nome da Cidade: %s\n",cidade2);
     printf("População: %d Habitantes\n",populacao2);
     printf("Área: %0.2f km²\n",area2);
-    printf("PIB: %0.2f bilhões de reais\n",pib2);
+    printf("PIB: %0.2f bilhões de reais\n",pib2/1000000000);
     printf("Número de Pontos Turísticos: %d\n",pontos2);
+    printf("Densidade Populacional: %0.2f hab/km²\n",densidade2);
+    printf("PIB per Capita: %0.2f reais\n",pibp2);
 
     return 0;
+
+
+
+
+
 }
